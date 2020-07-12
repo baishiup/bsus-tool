@@ -1,5 +1,13 @@
-import "antd/dist/antd.css";
+import Layout from "../components/Layout";
+import "../styles/reset.less";
+import "../styles/common.less";
 
-export default ({ Component, pageProps }) => {
-  return <Component {...pageProps}></Component>;
+import "antd/dist/antd.less";
+
+export default ({ Component, pageProps }: any) => {
+  return (
+    <Layout>
+      <Component {...pageProps}></Component>
+    </Layout>
+  );
 };
