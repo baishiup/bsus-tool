@@ -1,4 +1,4 @@
-import Layout from "./layout";
+import Layout from "../../components/encryptLayout";
 import { Button, Input, message } from "antd";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import { useState } from "react";

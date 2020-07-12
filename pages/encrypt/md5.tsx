@@ -1,4 +1,4 @@
-import Layout from "./layout";
+import Layout from "../../components/encryptLayout";
 import { Row, Col, Input, Button } from "antd";
 import { useState } from "react";
 import crypto from "crypto";
