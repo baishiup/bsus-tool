@@ -1,8 +1,9 @@
-import Layout from "../../components/encryptLayout";
+import Layout from "../../components/pageLayout";
 import { Button, Input, message } from "antd";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import WebHead from "../../components/WebHead";
+import { encryptRoutes } from "../../utils/sample-data";
 
 const { TextArea } = Input;
 
@@ -29,9 +30,13 @@ export default () => {
     setResValue("");
   }
   return (
-    <Layout menus={["加密/解密", "Base64加密/解密"]} url="/encrypt/base64">
+    <Layout breadcrumbs={["加密/解密", "Base64加密/解密"]} menus={encryptRoutes} curPath="/encrypt/base64">
       <div>
-        <WebHead></WebHead>
+        <WebHead
+          title="Base64编码/解码器，在线解码Base64"
+          description="Base64在线加密解密，Base64解码器，可逆的加密解密base64编码。"
+          keywords="Base64加密,Base64解密,Base64加密解密"
+        ></WebHead>
         <div style={{ display: "flex" }}>
           <div style={{ width: "400px" }}>
             <TextArea

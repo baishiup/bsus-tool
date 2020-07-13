@@ -1,10 +1,12 @@
-import Layout from "../../components/encryptLayout";
+import Layout from "../../components/pageLayout";
 import { Row, Col, Input, Button } from "antd";
 import { useState } from "react";
 import crypto from "crypto";
 import WebHead from "../../components/WebHead";
+import { encryptRoutes } from "../../utils/sample-data";
 
 const { TextArea } = Input;
+
 export default () => {
   const [value, setValue] = useState("");
 
@@ -15,7 +17,6 @@ export default () => {
 
   function markMD5() {
     const res = crypto.createHash("md5").update(value).digest("hex");
-
     setBig32(res.toLocaleUpperCase());
     setSmall32(res);
 
@@ -25,9 +26,13 @@ export default () => {
   }
 
   return (
-    <Layout menus={["加密/解密", "MD5加密"]} url="/encrypt/md5">
+    <Layout breadcrumbs={["加密/解密", "MD5加密"]} menus={encryptRoutes} curPath="/encrypt/md5">
       <div>
-        <WebHead></WebHead>
+        <WebHead
+          title="MD5在线加密/解密/破解—MD5在线"
+          description="在线md5加密，md5解密，md5加密算法，md5加密工具，免费MD5在线加密，MD5在线解密破解，MD5在线查询，免费MD5解密，支持32位MD5&6位MD5 。"
+          keywords="md5加密,md5加密算法,md5加密工具"
+        ></WebHead>
         <Row gutter={[20, 20]}>
           <Col span={8}>
             <TextArea value={value} onChange={(e) => setValue(e.target.value)} placeholder="md5加密内容粘贴到这里即可。" autoSize={{ minRows: 10 }} />
