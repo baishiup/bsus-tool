@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const { TextArea } = Input;
 import QRcode from "qrcode";
 import dayjs from "dayjs";
+import WebHead from "../../components/WebHead";
 
 export default () => {
   const defaultText = "https://tool.baishiup.com/qrcode/generate";
@@ -39,6 +40,7 @@ export default () => {
 
   return (
     <div className="container">
+      <WebHead></WebHead>
       <Breadcrumb separator=">">
         <Breadcrumb.Item>当前位置</Breadcrumb.Item>
         <Breadcrumb.Item>二维码生成</Breadcrumb.Item>

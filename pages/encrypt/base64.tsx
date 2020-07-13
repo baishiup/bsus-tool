@@ -2,7 +2,10 @@ import Layout from "../../components/encryptLayout";
 import { Button, Input, message } from "antd";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import { useState } from "react";
+import WebHead from "../../components/WebHead";
+
 const { TextArea } = Input;
+
 export default () => {
   const [value, setValue] = useState("");
   const [resValue, setResValue] = useState("");
@@ -28,6 +31,7 @@ export default () => {
   return (
     <Layout menus={["加密/解密", "Base64加密/解密"]} url="/encrypt/base64">
       <div>
+        <WebHead></WebHead>
         <div style={{ display: "flex" }}>
           <div style={{ width: "400px" }}>
             <TextArea

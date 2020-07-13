@@ -2,6 +2,7 @@ import Layout from "../../components/encryptLayout";
 import { Row, Col, Input, Button } from "antd";
 import { useState } from "react";
 import crypto from "crypto";
+import WebHead from "../../components/WebHead";
 
 const { TextArea } = Input;
 export default () => {
@@ -26,6 +27,7 @@ export default () => {
   return (
     <Layout menus={["加密/解密", "MD5加密"]} url="/encrypt/md5">
       <div>
+        <WebHead></WebHead>
         <Row gutter={[20, 20]}>
           <Col span={8}>
             <TextArea value={value} onChange={(e) => setValue(e.target.value)} placeholder="md5加密内容粘贴到这里即可。" autoSize={{ minRows: 10 }} />

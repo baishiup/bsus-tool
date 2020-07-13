@@ -6,8 +6,10 @@ import "antd/dist/antd.less";
 
 export default ({ Component, pageProps }: any) => {
   return (
-    <Layout>
-      <Component {...pageProps}></Component>
-    </Layout>
+    <div>
+      <Layout>
+        <Component {...pageProps}></Component>
+      </Layout>
+    </div>
   );
 };
