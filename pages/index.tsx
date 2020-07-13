@@ -1,5 +1,12 @@
+import WebHead from "../components/WebHead";
+
 const IndexPage = () => {
-  return <div>百事tool</div>;
+  return (
+    <div>
+      <WebHead></WebHead>
+      百事tool
+    </div>
+  );
 };
 
 export default IndexPage;
